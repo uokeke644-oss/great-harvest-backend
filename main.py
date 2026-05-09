@@ -47,11 +47,32 @@ STATES = [
         "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800",
     },
     {
+        "slug": "abuja",
+        "name": "Abuja",
+        "tagline": "Federal capital. Stable value.",
+        "propertyCount": 1,
+        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800",
+    },
+    {
         "slug": "kano",
         "name": "Kano",
         "tagline": "The ancient city of commerce",
         "propertyCount": 1,
         "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+    },
+    {
+        "slug": "anambra",
+        "name": "Anambra",
+        "tagline": "Rising eastern corridor.",
+        "propertyCount": 1,
+        "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800",
+    },
+    {
+        "slug": "akwa-ibom",
+        "name": "Akwa Ibom",
+        "tagline": "Coastal luxury & oil wealth.",
+        "propertyCount": 1,
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
     },
 ]
 
@@ -73,14 +94,7 @@ PROPERTIES = {
         ],
         "coordinates": {"lat": 6.4281, "lng": 3.4219},
         "description": "Premium plots in the heart of Lagos. A serene and well-planned estate with modern infrastructure and easy access to major roads.",
-        "features": [
-            "Perimeter fencing",
-            "Gated community",
-            "Good road network",
-            "Electricity supply",
-            "Water supply",
-            "C of O title",
-        ],
+        "features": ["Perimeter fencing", "Gated community", "Good road network", "Electricity supply", "Water supply", "C of O title"],
     },
     "201": {
         "id": "201",
@@ -95,14 +109,67 @@ PROPERTIES = {
         "gallery": [
             "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
             "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800",
-            "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?w=800",
         ],
         "coordinates": {"lat": 12.0022, "lng": 8.5920},
         "description": "Prime plots at Gate City Estate, Paneso Jaba. A well-planned estate with road access and verified title. Secure your plot today.",
-        "features": [
-            "Road access",
-            "C of O title",
+        "features": ["Road access", "C of O title"],
+    },
+    "301": {
+        "id": "301",
+        "title": "Great Harvest Abuja Estate",
+        "state": "abuja",
+        "location": "Kuje Area Council, Abuja FCT",
+        "price": 12000000,
+        "pricePerPlot": 12000000,
+        "totalPlots": 8,
+        "remainingPlots": 8,
+        "coverImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800",
+        "gallery": [
+            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800",
+            "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800",
+            "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
         ],
+        "coordinates": {"lat": 8.8940, "lng": 7.1860},
+        "description": "Strategic plots in Abuja's fastest growing corridor. Proximity to government infrastructure and major expressways makes this an excellent long-term investment.",
+        "features": ["Perimeter fencing", "Gated community", "Good road network", "Electricity supply", "C of O title"],
+    },
+    "401": {
+        "id": "401",
+        "title": "Great Harvest Anambra Estate",
+        "state": "anambra",
+        "location": "Awka South, Anambra State",
+        "price": 8000000,
+        "pricePerPlot": 8000000,
+        "totalPlots": 6,
+        "remainingPlots": 6,
+        "coverImage": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800",
+        "gallery": [
+            "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800",
+            "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800",
+            "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800",
+        ],
+        "coordinates": {"lat": 6.2127, "lng": 7.0678},
+        "description": "Well-located plots in Awka South, close to Anambra's state capital. A rapidly appreciating area with strong commercial and residential demand.",
+        "features": ["Perimeter fencing", "Good road network", "Water supply", "C of O title"],
+    },
+    "501": {
+        "id": "501",
+        "title": "Great Harvest Akwa Ibom Estate",
+        "state": "akwa-ibom",
+        "location": "Uyo Municipal, Akwa Ibom State",
+        "price": 10000000,
+        "pricePerPlot": 10000000,
+        "totalPlots": 5,
+        "remainingPlots": 5,
+        "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+        "gallery": [
+            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800",
+            "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800",
+            "https://images.unsplash.com/photo-1448630360428-65456885c650?w=800",
+        ],
+        "coordinates": {"lat": 5.0510, "lng": 7.9336},
+        "description": "Premium coastal plots in Uyo, the capital of Akwa Ibom State. Benefit from the state's oil wealth, tourism development and rapid urban expansion.",
+        "features": ["Perimeter fencing", "Gated community", "Good road network", "Electricity supply", "Water supply", "C of O title"],
     },
 }
 
@@ -131,6 +198,43 @@ PLOTS = {
         ],
         "remaining": 10,
         "total": 10,
+    },
+    "301": {
+        "plots": [
+            {"id": "AB-001", "label": "A1", "row": 0, "col": 0, "status": "available", "price": 12000000, "size": "500 sqm"},
+            {"id": "AB-002", "label": "A2", "row": 0, "col": 1, "status": "available", "price": 12000000, "size": "500 sqm"},
+            {"id": "AB-003", "label": "A3", "row": 0, "col": 2, "status": "available", "price": 12000000, "size": "500 sqm"},
+            {"id": "AB-004", "label": "B1", "row": 1, "col": 0, "status": "available", "price": 12000000, "size": "500 sqm"},
+            {"id": "AB-005", "label": "B2", "row": 1, "col": 1, "status": "available", "price": 12000000, "size": "500 sqm"},
+            {"id": "AB-006", "label": "B3", "row": 1, "col": 2, "status": "available", "price": 12000000, "size": "500 sqm"},
+            {"id": "AB-007", "label": "C1", "row": 2, "col": 0, "status": "available", "price": 12000000, "size": "500 sqm"},
+            {"id": "AB-008", "label": "C2", "row": 2, "col": 1, "status": "available", "price": 12000000, "size": "500 sqm"},
+        ],
+        "remaining": 8,
+        "total": 8,
+    },
+    "401": {
+        "plots": [
+            {"id": "AN-001", "label": "A1", "row": 0, "col": 0, "status": "available", "price": 8000000, "size": "500 sqm"},
+            {"id": "AN-002", "label": "A2", "row": 0, "col": 1, "status": "available", "price": 8000000, "size": "500 sqm"},
+            {"id": "AN-003", "label": "A3", "row": 0, "col": 2, "status": "available", "price": 8000000, "size": "500 sqm"},
+            {"id": "AN-004", "label": "B1", "row": 1, "col": 0, "status": "available", "price": 8000000, "size": "500 sqm"},
+            {"id": "AN-005", "label": "B2", "row": 1, "col": 1, "status": "available", "price": 8000000, "size": "500 sqm"},
+            {"id": "AN-006", "label": "B3", "row": 1, "col": 2, "status": "available", "price": 8000000, "size": "500 sqm"},
+        ],
+        "remaining": 6,
+        "total": 6,
+    },
+    "501": {
+        "plots": [
+            {"id": "AK-001", "label": "A1", "row": 0, "col": 0, "status": "available", "price": 10000000, "size": "500 sqm"},
+            {"id": "AK-002", "label": "A2", "row": 0, "col": 1, "status": "available", "price": 10000000, "size": "500 sqm"},
+            {"id": "AK-003", "label": "A3", "row": 0, "col": 2, "status": "available", "price": 10000000, "size": "500 sqm"},
+            {"id": "AK-004", "label": "B1", "row": 1, "col": 0, "status": "available", "price": 10000000, "size": "500 sqm"},
+            {"id": "AK-005", "label": "B2", "row": 1, "col": 1, "status": "available", "price": 10000000, "size": "500 sqm"},
+        ],
+        "remaining": 5,
+        "total": 5,
     },
 }
 
@@ -268,7 +372,7 @@ def get_my_bookings():
 def initialize_payment(payload: PaymentRequest):
     reference = f"PSK-REF-{payload.plotId or 'UNKNOWN'}"
     if payload.plotId and payload.amount and payload.email:
-        property_id = payload.plotId.split("-")[0].replace("LG", "101").replace("KN", "201")
+        property_id = payload.plotId.split("-")[0].replace("LG", "101").replace("KN", "201").replace("AB", "301").replace("AN", "401").replace("AK", "501")
         prop = PROPERTIES.get(property_id)
         investment = {
             "id": f"INV-{len(INVESTMENTS_STORE) + 1}",
@@ -297,7 +401,7 @@ def verify_payment(reference: str):
             "paidAt": "2025-01-01T00:00:00Z",
             "customer": {"name": "Test User", "email": "test@example.com"},
             "property": {"title": "Great Harvest Estate", "location": "Nigeria"},
-            "plot": {"label": "A1", "size": "174.4 sqm"},
+            "plot": {"label": "A1", "size": "500 sqm"},
         },
     }
 
