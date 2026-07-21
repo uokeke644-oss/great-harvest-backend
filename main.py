@@ -50,7 +50,7 @@ STATES = [
         "slug": "abuja",
         "name": "Abuja",
         "tagline": "Federal capital. Stable value.",
-        "propertyCount": 1,
+        "propertyCount": 2,
         "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800",
     },
     {
@@ -133,6 +133,25 @@ PROPERTIES = {
         "description": "Strategic plots in Abuja's fastest growing corridor. Proximity to government infrastructure and major expressways makes this an excellent long-term investment.",
         "features": ["Perimeter fencing", "Gated community", "Good road network", "Electricity supply", "C of O title"],
     },
+    "302": {
+        "id": "302",
+        "title": "The Harvest Residence",
+        "state": "abuja",
+        "location": "Kuchiyako Kuje, Abuja FCT",
+        "price": 8000000,
+        "pricePerPlot": 8000000,
+        "totalPlots": 45,
+        "remainingPlots": 45,
+        "coverImage": "https://i.ibb.co/Xrg0ThzZ/IMG-20260719-WA0005.jpg",
+        "gallery": [
+            "https://i.ibb.co/TDTsMQBw/IMG-20260719-WA0004.jpg",
+            "https://i.ibb.co/jPhgpj4D/IMG-20260719-WA0003.jpg",
+            "https://i.ibb.co/pBpLZC7n/IMG-20260719-WA0002.jpg",
+        ],
+        "coordinates": {"lat": 8.8778, "lng": 7.0329},
+        "description": "Premium plots at The Harvest Residence, Kuchiyako Kuje. A strategically located estate with verified title and excellent road access in Abuja's fastest growing corridor.",
+        "features": ["Road access", "C of O title", "Gated community", "Perimeter fencing"],
+    },
     "401": {
         "id": "401",
         "title": "Great Harvest Anambra Estate",
@@ -212,6 +231,14 @@ PLOTS = {
         ],
         "remaining": 8,
         "total": 8,
+    },
+    "302": {
+        "plots": [
+            {"id": f"HR-{str(i+1).zfill(3)}", "label": f"{chr(65 + i//5)}{(i%5)+1}", "row": i//5, "col": i%5, "status": "available", "price": 8000000, "size": "300 sqm"}
+            for i in range(45)
+        ],
+        "remaining": 45,
+        "total": 45,
     },
     "401": {
         "plots": [
@@ -372,7 +399,7 @@ def get_my_bookings():
 def initialize_payment(payload: PaymentRequest):
     reference = f"PSK-REF-{payload.plotId or 'UNKNOWN'}"
     if payload.plotId and payload.amount and payload.email:
-        property_id = payload.plotId.split("-")[0].replace("LG", "101").replace("KN", "201").replace("AB", "301").replace("AN", "401").replace("AK", "501")
+        property_id = payload.plotId.split("-")[0].replace("LG", "101").replace("KN", "201").replace("AB", "301").replace("HR", "302").replace("AN", "401").replace("AK", "501")
         prop = PROPERTIES.get(property_id)
         investment = {
             "id": f"INV-{len(INVESTMENTS_STORE) + 1}",
@@ -401,7 +428,7 @@ def verify_payment(reference: str):
             "paidAt": "2025-01-01T00:00:00Z",
             "customer": {"name": "Test User", "email": "test@example.com"},
             "property": {"title": "Great Harvest Estate", "location": "Nigeria"},
-            "plot": {"label": "A1", "size": "500 sqm"},
+            "plot": {"label": "A1", "size": "300 sqm"},
         },
     }
 
